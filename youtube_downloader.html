@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube Video Downloader</title> 
+    <style>
+      body {
+        height: 3000px;
+      }
+      h3 {
+        font-family: arial;
+      }
+      p {
+        font-family: Arial;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .title {
+        font-size: 60px;
+        width: 800px;
+        text-align: center;
+        font-family: arial;
+      }
+      .title-div {
+        display: flex;
+        justify-content: center;
+      }
+      .search-box {
+        width: 800px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: rgb(172,180,196);
+        color: black;
+        font-size: 16px;
+
+      }
+      .search-box-div {
+        display: flex;
+        justify-content: center;
+      }
+      .button-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+      .paste-button {
+        width: 120px;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 80px;
+        text-align: center;
+        
+      }
+      .download-button {
+        width: 120px;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+      }
+      .description-title {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: arial;
+      }
+      .description {
+        display: block;
+        text-align: center;
+        width: 300px;
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-left: 600px;
+      }
+      .flexbox1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
+      }
+      .img1 {
+        width: 200px;
+      }
+      .img2 {
+        width: 200px;
+        padding-top: 45px;
+      }
+      .img3 {
+        width: 180px;
+        padding-top: 5px;
+      }
+      .box1 {
+        width: 260px;
+        margin-right: 140px;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.11);
+        border-radius: 6px;
+      }
+      .img-container1 {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(210, 227, 252);
+        align-items: center;
+        border-radius: 6px;
+
+      }
+      .text-container {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(255,255,255);
+        border-radius: 6px;
+      }
+      .img-container2 {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(250, 210, 207);
+        align-items: center;
+        border-radius: 6px;
+
+      }
+      .img-container3 {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(206, 234, 214);
+        align-items: center;
+        border-radius: 6px;
+      }
+      .box2 {
+        width: 260px;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.11);
+        border-radius: 6px;
+
+      }
+      .box3 {
+        width: 260px;
+        margin-left: 140px;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.11);
+        border-radius: 6px;
+
+      }
+
+      .flexbox2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      .img4 {
+        width: 180px;
+        padding-top: 10px;
+      }
+      .img-container4 {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(254, 239, 195);
+        align-items: center;
+        border-radius: 6px;
+      }
+      .img-container5 {
+        height: 200px;
+        width: 260px;
+        background-color: rgb(255, 213, 236);
+        align-items: center;
+        border-radius: 6px;
+      }
+      .img-container6 {
+        height: 200px;  
+        width: 260px;
+        background-color: rgb(209, 244, 255);
+        align-items: center;
+        border-radius: 6px;
+      }
+      .instructions-title {
+        font-family: arial;
+        text-align: center;
+        margin-top: 80px;
+        font-size: 40px;
+      }
+      .flexbox-instructions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+      .number1 {
+        width: 80px;
+        border-radius:40px;
+      }
+      .number1-content {
+        margin-top: 20px;
+        width: 300px;
+        margin-left: 20px;
+      }
+      .number2-content {
+        margin-top: 15px;
+        width: 300px;
+        margin-left: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="title-div">
+      <h2 class="title">
+        Online Video Downloader For Free
+      </h2>
+    </div>
+
+    <div class="search-box-div">
+      <input class="search-box"
+        placeholder="Search or Paste Youtube link here...">
+    </div>
+
+    <div class="button-div">
+      <button class="paste-button">
+        Paste
+      </button>
+      <button class="download-button">
+        Download
+      </button>
+    </div>
+
+    <div>
+      <h3 class="description-title">
+        Best Youtube Video Downloader
+      </h3>
+      <div class="description-div">
+        <p class="description">
+          Y2hub is a converter & downloader can deal with videos from 
+          YouTube, Facebook, Video, Dailymotion, Youku, etc. to Mp3, Mp4 in HD quality.
+          Y2hub supports downloading all video formats such as: MP4, M4V,
+          3GP, WMV, FLV, MO, MP3, WEBM, etc. You can easily download for free 
+          from Y2hub and other websites.
+        </p>
+      </div>
+    </div>
+    
+    <div class="flexbox1">
+      <div class="box1">
+        <div class="img-container1">
+          <img src="Intro-to-html/img1.svg"
+          class="img1">
+        </div>
+        <div class="text-container">
+          <h3>Fast and easy to use</h3>
+          <p>
+            Using our Youtube downloader is the fast and easy way to 
+            download and save any YouTube video to MP3 or MP4. Simply 
+            copy YouTube URL, paste it on the search box and click on
+            "Convert" button. No register accounts needed.
+          </p>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="img-container2">
+          <img src="Intro-to-html/limit.svg"
+          class="img2">
+        </div>
+        <div class="text-container">
+          <h3>
+            Without limitation
+          </h3>
+          <p>
+            Download and convert YouTube videos as much as
+            you want without limitation and always free.
+          </p>
+        </div>
+      </div>
+
+      <div class="box3">
+        <div class="img-container3">
+          <img src="Intro-to-html/safe.svg"
+          class="img3">
+        </div>
+        <div class="text-container">
+          <h3>
+            100% Safe and Clean
+          </h3>
+          <p>
+            With the rising awareness of device
+            security, people attach great importance to 
+            personal data. The service is totally clean
+            with no virus under intense supervision 
+            based on security database.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexbox2">
+      <div class="box1">
+        <div class="img-container4">
+          <img src="Intro-to-html/platform.svg"
+          class="img1">
+        </div>
+        <div class="text-container">
+          <h3>Full platforms supported</h3>
+          <p>
+            We support all device platforms. Easy to
+            convert YouTube videos to MP3 files regardless
+            of whether you are using Windows, Mac or Linux
+            , Android, iPhone.
+          </p>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="img-container5">
+          <img src="Intro-to-html/support.svg"
+          class="img4">
+        </div>
+        <div class="text-container">
+          <h3>
+            Full file format supported
+          </h3>
+          <p>
+            We support all video and audio formats conversion.
+            You can easily convert YouTube videos to MP3, 3GP
+            , MP4, WMA, M4A, FLV, WEBM and MO formats, etc.
+          </p>
+        </div>
+      </div>
+
+      <div class="box3">
+        <div class="img-container6">
+          <img src="Intro-to-html/cloud.svg"
+          class="img3">
+        </div>
+        <div class="text-container">
+          <h3>
+            Cloud support
+          </h3>
+          <p>
+            We support uploading the converted
+            files to your DropBox and Google Drive.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="instructions-title">
+      How to download Youtube video?
+    </h2>
+
+    <div class="flexbox-instructions">
+      <div>
+        <img src="Intro-to-html/1.jpg"
+        class="number1">  
+      </div>
+      <div>
+        <p class="number1-content">
+          Paste YouTube url or enter keywords
+          into the search box.
+        </p>
+      </div>
+    </div>
+
+    <div class="flexbox-instructions">
+      <div>
+        <img src="Intro-to-html/2.jpg"
+        class="number1">  
+      </div>
+      <div>
+        <p class="number2-content">
+          Choose output MP4 or MP3 format 
+          you want to convert and click 
+          "Download" button.
+        </p>
+      </div>
+    </div>
+    
+
+  </body>
+
+</html>
